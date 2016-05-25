@@ -1,7 +1,13 @@
 package adventofcode_11;
 
+/*
+PassMaker is in charge of generating new passwords given a starting seed
+*/
+
 public class PassMaker 
 {
+    // Repeatedly generate new passwords until a valid password is produced
+    // Return an empty string if the input seed is malformed
     public static String generateNewPassword(String oldPass)
     {
         String password;
@@ -20,7 +26,8 @@ public class PassMaker
         return password;
     }
     
-    protected static boolean checkInput(String pass)
+    // verifies that the input is the required length and is only alpha chars
+    private static boolean checkInput(String pass)
     {
         boolean valid = true;
         
@@ -37,6 +44,7 @@ public class PassMaker
         return valid;
     }
     
+    // checks if the input doesn't fail any of the validation checks
     private static boolean checkPassword(String input)
     {
         boolean valid = true;

@@ -28,33 +28,19 @@ public class PassMakerTest {
     public void tearDown() {
     }
 
-    /**
-     * Test of checkInput method, of class PassMaker.
-     */
-    @Test
-    public void testCheckInput() 
-    {
-        // null
-        assertEquals(false, PassMaker.checkInput(""));
-        // empty
-        assertEquals(false, PassMaker.checkInput(""));
-        // too short
-        assertEquals(false, PassMaker.checkInput("abcdefg"));
-        // correct
-        assertEquals(true, PassMaker.checkInput("abcdefgh"));
-        // non-alpha
-        assertEquals(false, PassMaker.checkInput("12345678"));
-    }
-    
     @Test
     public void testGenerateNewPassword()
     {
-        // nulll input
+        // null
         assertEquals("", PassMaker.generateNewPassword(null));
-        // test the examples given in the puzzle
+        // empty
+        assertEquals("", PassMaker.generateNewPassword(""));
+        // too short
+        assertEquals("", PassMaker.generateNewPassword("abcdefg"));
+        // non-alpha
+        assertEquals("", PassMaker.generateNewPassword("12345678"));
+        // the valid examples given in the puzzle
         assertEquals("abcdffaa", PassMaker.generateNewPassword("abcdefgh"));
         assertEquals("ghjaabcc", PassMaker.generateNewPassword("ghijklmn"));
     }
-    
-    
 }
