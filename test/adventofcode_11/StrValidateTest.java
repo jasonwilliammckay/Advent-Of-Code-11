@@ -43,9 +43,9 @@ public class StrValidateTest {
         assertEquals(false, StrValidate.findStraight("aaa"));
         assertEquals(false, StrValidate.findStraight("abd"));
         assertEquals(true, StrValidate.findStraight("abc"));
-        assertEquals(true, StrValidate.findStraight("ijkzzz"));
-        assertEquals(true, StrValidate.findStraight("aaaijkzzz"));
-        assertEquals(true, StrValidate.findStraight("aaaijk"));
+        assertEquals(true, StrValidate.findStraight("ijk_"));
+        assertEquals(true, StrValidate.findStraight("_ijk_"));
+        assertEquals(true, StrValidate.findStraight("_ijk"));
     }
 
     /**
