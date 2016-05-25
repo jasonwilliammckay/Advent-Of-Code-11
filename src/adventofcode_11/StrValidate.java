@@ -8,7 +8,7 @@ public class StrValidate
 {
     // checks if any substring has 3 sequential characters
     // ie. 'abc' returns true while 'abd' does not
-    static Boolean findStraight(String target)
+    protected static Boolean findStraight(String target)
     {
         boolean found = false;
 
@@ -29,7 +29,7 @@ public class StrValidate
     // checks if a string contains any forbidden characters or not
     // returns true if nothing invalid is found
     // returns false if an invalid character is found, or if the input is null
-    static Boolean checkValidChars(String target)
+    protected static Boolean checkValidChars(String target)
     {
         boolean found = true;
 
@@ -47,7 +47,7 @@ public class StrValidate
 
     // checks if a string contains at least two pairs of characters
     // pairs cannot overlap (ie. 'aaa' is not two pairs)
-    static Boolean checkPairs(String target)
+    protected static Boolean checkPairs(String target)
     {
         int numPairs = 0;
         boolean found = false;
